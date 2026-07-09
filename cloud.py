@@ -18,7 +18,7 @@ def setup_rclone_config():
 
 
 def restore_db():
-    # setup_rclone_config() # Git + Streamlit Cloud (b6)
+    setup_rclone_config() # Git + Streamlit Cloud (b6)
 
     if not os.path.exists(DB_FILE):
         print("Không tìm thấy Database local → Đang khôi phục từ Google Drive...")
@@ -32,7 +32,7 @@ def restore_db():
 
 
 def backup_db():
-    # setup_rclone_config() # Git + Streamlit Cloud (b6)
+    setup_rclone_config() # Git + Streamlit Cloud (b6)
     os.makedirs(BACKUP_DIR, exist_ok=True)
 
     # 1. Tạo file backup local real-time
